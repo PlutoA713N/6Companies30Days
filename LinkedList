@@ -34,5 +34,28 @@ LinkedList {
   }
 }
 
+// 2. Finding a intersection node in circular linked list using pointers
+// To find the intersection point in the cicular linked list
+// By using pointers
+
+// t = tortoise, r = rabbit 
+
+
+let t = head
+let r = head
+while(r && r.next) {
+    t.next
+    r.next.next
+    if(t == r){
+        t = head
+    while(t != r){
+        t.next
+        r.next
+    }
+    return t;
+    }
+}
+return null;
+
 
 
