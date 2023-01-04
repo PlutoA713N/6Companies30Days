@@ -1,4 +1,4 @@
-// Creating a new Linked list in JS
+// 1. Creating a new Linked list in JS
 class ListNode {
     // Items created for node
     constructor(data) {
@@ -57,5 +57,19 @@ while(r && r.next) {
 }
 return null;
 
+// 2.2 By using Sets
+// Here we used set to find intersection node when we encounter same node, it returns
 
+function findIntersectionNode(head) {
+    
+const visited = new Set()
+let curr = head
+
+while (curr) {
+    if(visited.has(curr)) return curr;
+    visited.add(curr)
+    curr.next
+}
+return null;
+}
 
