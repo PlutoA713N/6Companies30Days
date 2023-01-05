@@ -1,0 +1,88 @@
+// Map vs Obj
+
+// Creating Object and Map
+
+const obj = {}
+obj[0] = 1
+obj[1] = 2
+
+const map = new Map()
+map.set(0,1).set(1,2)
+
+console.log( obj, map )
+
+// Accesing values from both
+
+console.log( obj[0] )
+console.log( map.get(1) )
+
+// Checking if key exist
+
+console.log( obj[0] !== undefined )
+console.log( obj[2] !== undefined )
+
+const x = (y,z) => console.log(y,z);
+// A function to use in place of console.log()
+
+x( map.has(0) )
+x( map.has(2) )
+
+// Adding elements
+
+obj['new'] = 'new data1'
+obj['new2'] = 'new data2'
+
+
+map.set('new', 'mapdata1').set('new2', 'mapdata2')
+
+x (obj, map)
+
+// Deleting
+
+  delete obj.new // obj['new']
+  map.delete('new')
+  
+  x(obj, map)
+ 
+ // Iterating Obj & Map using 'for loops' 
+ 
+ // For Objects we prefer 'for-in' loops
+ 
+ for (const index in obj) {
+     x ( index, obj[index] )
+ }
+ 
+ // For maps , we can use 'for-of' loops
+ 
+ for (const [key, value] of map) {
+     x (key, value)
+ }
+  
+  // Also we can access keys & values by using its prototypes
+  
+  Object.keys(obj)
+  .forEach(key => {
+      console.log (`key : ${key}, value : ${obj[key]}`)
+  })
+  
+  map.
+  forEach((key,value) => {
+      console.log('key :',key,'value :', value)
+  })
+  
+  // Length of Obj & Map
+  
+  console.log ( Object.keys(obj).length )
+  
+  console.log( map.size )
+  
+  // Their Representation
+  
+  x (obj, map)
+  
+  
+
+
+
+
+
