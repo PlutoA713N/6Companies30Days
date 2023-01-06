@@ -1,0 +1,67 @@
+// SET
+// Creating a Set
+const set = new Set()
+set.add(6)
+set.add(1).add(10)
+set.add(3)
+set.add(8)
+set.add(3) // Ignored
+console.log(set)
+
+// Checking the existence of a value in Set
+
+console.log( set.has(3) )
+console.log( set.has(28) )
+
+// Deleting a Set elements
+
+set.delete(3);
+console.log(set)
+
+// In set we can also add. objects, arrays , sets and strings but make sure it has a reference
+
+set.add( {1 : 4} )
+set.add( {1 : 4} )
+const obj = {'key' : 'value'}
+set.add(obj)
+
+// when we add something without reference , we cant access it easily , we need to use J.SON stringify,then these are considered as values
+
+console.log( set.has( {1 : 4}) ) 
+// returns false , we must create a refernce in order to access it
+
+// Added another Set2 in Set
+const set2 = new Set()
+set2.add('something')
+set2.add('cookie')
+
+set.add(set2)
+
+console.log(set)
+
+// Accesing Set size
+
+console.log(set.size)
+
+// Removes duplicates from an array
+
+let ar = [1,2,2,3,3,4,5,5]
+
+// One liner
+console.log( [...new Set(ar)])
+     // || 
+         let unique = new Set(ar)
+         let arr = Array.from(unique)
+         console.log(arr)
+       
+// Time Complexity
+
+* Searching by Value = O(1)
+* Add  elements = O(1)*
+ // sometimes 0(n) gradually decreases (cuz of rehashing)
+* delete elements = O(1)
+* space complexity = O(1)
+
+
+
+
