@@ -1,0 +1,17 @@
+// Using an Array as Stack
+
+var stack = []
+stack.push(1)
+stack.push(2)
+let data = stack.pop()
+alert(data)
+console.log(stack)
+
+//Using an Array as Queue
+
+var queue = []
+queue.push(1,2,3,4)
+var data2 = queue.shift()
+alert(data2)
+console.log(queue)
+
