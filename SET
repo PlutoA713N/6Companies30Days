@@ -63,5 +63,31 @@ console.log( [...new Set(ar)])
 * space complexity = O(1)
 
 
+Set question :
+* Longest Without Repeating
+ST-2) Find the length of the longest substring without repeating characters.
+
+Common in interviews at: Amazon, Facebook, Bloomberg.
+
+Examples:
+
+lenLongestSubstring('aaaaa'); // 1 ('a')
+lenLongestSubstring('abccdefg'); // 5 ('cdefg')
+lenLongestSubstring('abc'); // 3 ('abc')
+
+function len(s) {
+    max = 0
+    set = new Set()
+    
+    for(let i=0,j=0; i < s.length; i++) {
+        while( set.has(s[i]) ) set.delete(s[j++])
+        set.add(s[i])
+        max = Math.max(max, set.size)
+        console.log(set)
+    }
+    
+}
+len('abccdefg')
+
 
 
