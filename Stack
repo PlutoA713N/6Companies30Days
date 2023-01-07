@@ -15,3 +15,28 @@ var data2 = queue.shift()
 alert(data2)
 console.log(queue)
 
+Practice Questions
+Validate Parentheses / Braces / Brackets
+ST-1) Given a string with three types of brackets: (), {}, and []. Validate they are correctly closed and opened.
+
+Examples:
+
+isParenthesesValid('(){}[]'); // true
+isParenthesesValid('('); // false (closing parentheses is missing)
+isParenthesesValid('([{}])'); // true
+isParenthesesValid('[{]}'); // false (brakets are not closed in the right order)
+isParenthesesValid('([{)}]'); // false (closing is out of order)
+
+function isParenthesesValid(string) {
+  // end::description[]
+  // tag::solution[]
+  const map = new Map([['(', ')'], ['{', '}'], ['[', ']']]);
+  const stack = [];
+
+  for (const c of string) {
+    if (map.has(c)) stack.push(map.get(c));
+    else if (c !== stack.pop()) return false;
+  }
+
+  return stack.length === 0;
+}
