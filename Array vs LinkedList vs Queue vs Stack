@@ -1,0 +1,23 @@
+   Array vs LinkedList vs Stack vs Queue
+
+   Array -
+ > We use it to access the middle index value of the Array in O(1) by indexx
+ > In order to access the elements in 2d rows and columns (matrix)
+ 
+   Linked List -
+ > Insertion of element at beginning & middle takes O(1)
+ > It takes the required space to store its elements 
+ > Data is accessed sequentially
+ 
+   Stack -
+ > Data strcuture is in (Last in First Out) approach
+ > Elements added at rear and deleted from rear (O(1)) using linked list & Array
+ > you need to implement a Depth First Search
+ > Example - A plie of books on top of each other
+ 
+  Queue -
+ > Data Structure is in (First in First Out Approach)
+ > Example - Bank Queue
+ > you need to implement a Breadth First Search
+ 
+ 
